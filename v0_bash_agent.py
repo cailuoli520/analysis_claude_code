@@ -57,7 +57,7 @@ load_dotenv(override=True)
 
 # Initialize Anthropic client (uses ANTHROPIC_API_KEY and ANTHROPIC_BASE_URL env vars)
 client = Anthropic(base_url=os.getenv("ANTHROPIC_BASE_URL"))
-MODEL = "claude-sonnet-4-5-20250929"
+MODEL = os.getenv("MODEL_ID", "claude-sonnet-4-5-20250929")
 
 # The ONE tool that does everything
 # Notice how the description teaches the model common patterns AND how to spawn subagents

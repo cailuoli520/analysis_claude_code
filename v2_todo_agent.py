@@ -74,7 +74,7 @@ load_dotenv(override=True)
 WORKDIR = Path.cwd()
 
 client = Anthropic(base_url=os.getenv("ANTHROPIC_BASE_URL"))
-MODEL = "claude-sonnet-4-5-20250929"
+MODEL = os.getenv("MODEL_ID", "claude-sonnet-4-5-20250929")
 
 
 # =============================================================================
